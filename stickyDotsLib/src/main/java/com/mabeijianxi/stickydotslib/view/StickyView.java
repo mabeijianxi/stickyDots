@@ -191,9 +191,9 @@ public class StickyView extends View {
                     mDragRadius, mPaint);
         }
 //        参考范围，没实际作用
-		mPaint.setStyle(Paint.Style.STROKE);
+		/*mPaint.setStyle(Paint.Style.STROKE);
 		canvas.drawCircle(mFixCanterPoint.x, mFixCanterPoint.y, mFarthestDistance, mPaint);
-		mPaint.setStyle(Paint.Style.FILL);
+		mPaint.setStyle(Paint.Style.FILL);*/
 
         canvas.restore();
     }
