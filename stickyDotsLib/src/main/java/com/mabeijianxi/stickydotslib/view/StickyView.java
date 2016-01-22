@@ -291,7 +291,7 @@ public class StickyView extends View {
             }
         });
         addUpEndAnimListener(animator);
-        animator.setInterpolator(new OvershootInterpolator(5.0f));
+        animator.setInterpolator(new OvershootInterpolator(4.0f));
         animator.setDuration(500);
         animator.start();
     }

@@ -193,9 +193,6 @@ public class StickyViewHelper implements View.OnTouchListener, StickyView.DragSt
     public void outRangeUp(PointF dragCanterPoint) {
         removeView();
         playAnim(dragCanterPoint);
-        if (viewOutRangeUpRun != null) {
-            viewOutRangeUpRun.run();
-        }
     }
 
     /**
@@ -239,6 +236,9 @@ public class StickyViewHelper implements View.OnTouchListener, StickyView.DragSt
                 mAnimDrawable.stop();
                 imageView.clearAnimation();
                 mWm.removeView(imageView);
+                if (viewOutRangeUpRun != null) {
+                    viewOutRangeUpRun.run();
+                }
             }
         },duration);
     }
