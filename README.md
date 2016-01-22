@@ -12,18 +12,24 @@
 
 ###Gradle
 `dependencies {
-    compile project(':stickyDotsLib')
-}`
+    compile project(':stickyDotsLib')}`
+
 ---
 ###Step-2
 Choose the right place to create it，for example：
+
 `//             Note for needed to achieve drag effect of view needs to
+
 //              individually specify a layout file,and layout is best cannot have viewGroup,
+
 //              or view shown above the text may in drag does not recognize.
+
 //              This is in order to facilitate, in order to reduce consumption.
+
             StickyViewHelper stickyViewHelper = new StickyViewHelper(mContext, viewHolder.mDragView,R.layout.includeview);`
 
 The layout of includeview like this:
+
 `<?xml version="1.0" encoding="utf-8"?>
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/mDragView"
