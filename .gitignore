@@ -1,0 +1,28 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Java class files
+*.class
+
+# Log Files
+*.log
+
+# Files for the Dalvik VM
+*.dex
+
+# Generated files
+bin/
+gen/
+
+# Gradle files
+.gradle/
+build/
