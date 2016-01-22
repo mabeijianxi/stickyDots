@@ -131,25 +131,40 @@ You can also specify mapping rules:
 It can be decomposed into three parts, a fixed circle, a drag and drop round, a connection rod.
 According to the fingers to move the position of the drawing is ok.It need a little geometry knowledge.
 
+Draw a fixed circle:  
 `canvas.drawCircle(mFixCanterPoint.x, mFixCanterPoint.y, mFixRadius,
                     mPaint);`
 
+Moving to a point of tangency:  
 `mPath.moveTo(mFixTangentPointes[0].x, mFixTangentPointes[0].y);`
 
+
+According to the two circles tangent point on quadratic bezier curve drawing:
 `mPath.quadTo(mCanterPoint.x, mCanterPoint.y,
                     mDragTangentPoint[0].x, mDragTangentPoint[0].y);`
 
+Another point of tangency direction to draw a straight line:
 ` mPath.lineTo(mDragTangentPoint[1].x, mDragTangentPoint[1].y);`
 
+Is a quadratic bezier curve:
 ` mPath.quadTo(mCanterPoint.x, mCanterPoint.y,
                     mFixTangentPointes[1].x, mFixTangentPointes[1].y);`
 
+Form a closed image, in fact, the end connection:  
 ` mPath.close();`
            ` canvas.drawPath(mPath, mPaint);`
 
+Finally draw drag the circle is complete :
 `canvas.drawCircle(mDragCanterPoint.x, mDragCanterPoint.y,
                     mDragRadius, mPaint);`
 
-Specific, you can download to learn more
+
+About the second order bezier curve:
+
+![](http://7xq6db.com1.z0.glb.clouddn.com/240px-Bezier_2_big.gif)
+
+It is the starting point and a form of control points according to certain algorithm
+
+####Specific, you can download to learn more
 
 ##有什么不足的地方欢迎大家提出，也很乐意和大家交流，我的联系邮箱是*mabeijianxi@gmail.com*
