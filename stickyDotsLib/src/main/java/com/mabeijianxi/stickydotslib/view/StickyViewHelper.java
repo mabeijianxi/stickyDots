@@ -38,9 +38,9 @@ public class StickyViewHelper implements View.OnTouchListener, StickyView.DragSt
     private View mShowView;
     private int mStatusBarHeight;
     private float mMinFixRadius;
-    private float mDragRadius;
     private float mFixRadius;
     private float mFarthestDistance;
+    private int mPathColor;
 
 
     public StickyViewHelper(Context mContext, View mShowView, int dragViewLayouId) {
@@ -117,6 +117,9 @@ public class StickyViewHelper implements View.OnTouchListener, StickyView.DragSt
         if(mFixRadius>0){
             mStickyView.setFixRadius(mFixRadius);
         }
+        if(mPathColor!=0){
+            mStickyView.setPaintColor(mPathColor);
+        }
 //          初始化做作画的圆和控制点坐标
         mStickyView.setShowCanterPoint(x, y);
     }
@@ -137,6 +140,7 @@ public class StickyViewHelper implements View.OnTouchListener, StickyView.DragSt
     public void setFarthestDistance(float mFarthestDistance) {
         this.mFarthestDistance = mFarthestDistance;
     }
+
     /**
      * 设置拖拽过程中固定圆变化的最小半径值
      * @param mMinFixRadius px
@@ -144,12 +148,21 @@ public class StickyViewHelper implements View.OnTouchListener, StickyView.DragSt
     public void setMinFixRadius(float mMinFixRadius) {
         this.mMinFixRadius = mMinFixRadius;
     }
+
     /**
      * 设置固定圆半径
      * @param mFixRadius px
      */
     public void setFixRadius(float mFixRadius) {
         this.mFixRadius = mFixRadius;
+    }
+
+    /**
+     * 设置绘制颜色
+     * @param mPathColor
+     */
+    public void setmPathColor(int mPathColor) {
+        this.mPathColor = mPathColor;
     }
     /**
      * 在范围内移动回调
@@ -268,6 +281,13 @@ public class StickyViewHelper implements View.OnTouchListener, StickyView.DragSt
         return viewInRangeMoveRun;
     }
 
+    public Runnable getViewOutRangeMoveRun() {
+        return viewOutRangeMoveRun;
+    }
+
+    public Runnable getViewOut2InRangeUpRun() {
+        return viewOut2InRangeUpRun;
+    }
     /**
      * view在范围内移动指此此Runnable
      * @param viewInRangeMoveRun
@@ -276,19 +296,12 @@ public class StickyViewHelper implements View.OnTouchListener, StickyView.DragSt
         this.viewInRangeMoveRun = viewInRangeMoveRun;
     }
 
-    public Runnable getViewOutRangeMoveRun() {
-        return viewOutRangeMoveRun;
-    }
     /**
      * view在范围外移动执行此Runnable
      * @param viewOutRangeMoveRun
      */
     public void setViewOutRangeMoveRun(Runnable viewOutRangeMoveRun) {
         this.viewOutRangeMoveRun = viewOutRangeMoveRun;
-    }
-
-    public Runnable getViewOut2InRangeUpRun() {
-        return viewOut2InRangeUpRun;
     }
 
     /**
@@ -299,8 +312,12 @@ public class StickyViewHelper implements View.OnTouchListener, StickyView.DragSt
         this.viewOut2InRangeUpRun = viewOut2InRangeUpRun;
     }
 
-    public Runnable getViewOutRangeUpRun() {
-        return viewOutRangeUpRun;
+    /**
+     * view没有移出过范围，在范围内松手
+     * @param mViewInRangeUpRun
+     */
+    public void setViewInRangeUpRun(Runnable mViewInRangeUpRun) {
+        this.mViewInRangeUpRun = mViewInRangeUpRun;
     }
 
     /**
@@ -312,15 +329,11 @@ public class StickyViewHelper implements View.OnTouchListener, StickyView.DragSt
     }
 
 
-    public Runnable getmViewInRangeUpRun() {
-        return mViewInRangeUpRun;
+    public Runnable getViewOutRangeUpRun() {
+        return viewOutRangeUpRun;
     }
 
-    /**
-     * view没有移出过范围，在范围内松手
-     * @param mViewInRangeUpRun
-     */
-    public void setViewInRangeUpRun(Runnable mViewInRangeUpRun) {
-        this.mViewInRangeUpRun = mViewInRangeUpRun;
+    public Runnable getmViewInRangeUpRun() {
+        return mViewInRangeUpRun;
     }
 }
