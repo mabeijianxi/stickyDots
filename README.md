@@ -18,7 +18,7 @@
 ###Step-2
 Choose the right place to create it，for example：
 
-`//             Note for needed to achieve drag effect of view needs to
+//             Note for needed to achieve drag effect of view needs to
 
 //              individually specify a layout file,and layout is best cannot have viewGroup,
 
@@ -26,23 +26,23 @@ Choose the right place to create it，for example：
 
 //              This is in order to facilitate, in order to reduce consumption.
 
-            StickyViewHelper stickyViewHelper = new StickyViewHelper(mContext, viewHolder.mDragView,R.layout.includeview);`
+            StickyViewHelper stickyViewHelper = new StickyViewHelper(mContext, viewHolder.mDragView,R.layout.includeview);
 
 The layout of includeview like this:
 
-`<?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/mDragView"
-    android:layout_width="wrap_content"
-    android:layout_height="20dp"
-    android:background="@drawable/red_bg"
-    android:gravity="center"
-    android:layout_gravity="center"
-    android:singleLine="true"
-    android:text="1"
-    android:textSize="13sp"
-    android:textColor="@android:color/white"
-    />`
+`<?xml version="1.0" encoding="utf-8"?>`  
+`<TextView xmlns:`
+	`android="http://schemas.android.com/apk/res/android"`  
+   ` android:id="@+id/mDragView"`  
+   ` android:layout_width="wrap_content"`  
+    `android:layout_height="20dp"`  
+    `android:background="@drawable/red_bg"`  
+  `  android:gravity="center"`  
+  `  android:layout_gravity="center"`  
+ `   android:singleLine="true"`  
+  `  android:text="1"`
+    `android:textSize="13sp"`  
+    `android:textColor="@android:color/white"/>`
 
 You can monitor each process of mobile:
 
