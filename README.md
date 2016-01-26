@@ -165,6 +165,6 @@ About the second order bezier curve:
 
 It is the starting point and a form of control points according to certain algorithm
 
-####Specific, you can download to learn more
+####Specific, you can download to learn more.Or see my blog for details,[http://blog.csdn.net/mabeijianxi/article/details/50560361](http://blog.csdn.net/mabeijianxi/article/details/50560361)
 
 ##有什么不足的地方欢迎大家提出，也很乐意和大家交流，我的联系邮箱是*mabeijianxi@gmail.com*
