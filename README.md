@@ -1,5 +1,9 @@
 ## stickyDots
-#####类似QQ的小红点，QQ can drag the little red dot,先看下效果图：
+#####类似QQ的小红点，QQ can drag the little red dot.
+更多介绍[http://blog.csdn.net/mabeijianxi/article/details/50560361](http://blog.csdn.net/mabeijianxi/article/details/50560361)
+
+
+先看下效果图：
 
 ![demo](http://7xq6db.com1.z0.glb.clouddn.com/stickydots.gif)
 
