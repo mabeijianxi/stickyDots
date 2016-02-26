@@ -1,4 +1,4 @@
-package com.mabeijianxi.simple;
+package com.mabeijianxi.samples;
 
 import org.junit.Test;
 

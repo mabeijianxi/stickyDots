@@ -272,7 +272,7 @@ public class StickyView extends View {
     }
 
     /**
-     * 移动的时候在范围内
+     * 移动的时候一直在范围内，最后在范围内松手
      */
     private void inUp() {
         final PointF startPoint = new PointF(mDragCanterPoint.x,

@@ -1,1 +1,1 @@
-include ':stickyDotsLib', ':simple'
+include ':stickyDotsLib', ':samples'

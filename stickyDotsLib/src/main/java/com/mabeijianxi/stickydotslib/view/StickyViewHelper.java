@@ -53,6 +53,7 @@ public class StickyViewHelper implements View.OnTouchListener, StickyView.DragSt
         mShowView.setOnTouchListener(this);
         mParams = new WindowManager.LayoutParams();
         mParams.format = PixelFormat.TRANSLUCENT;
+
     }
 
     @Override
@@ -60,7 +61,6 @@ public class StickyViewHelper implements View.OnTouchListener, StickyView.DragSt
 
         int action = MotionEventCompat.getActionMasked(event);
         if (action == MotionEvent.ACTION_DOWN) {
-
             ViewParent parent = v.getParent();
             if (parent == null) {
                 return false;

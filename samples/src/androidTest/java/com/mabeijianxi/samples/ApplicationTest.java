@@ -1,4 +1,4 @@
-package com.mabeijianxi.simple;
+package com.mabeijianxi.samples;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

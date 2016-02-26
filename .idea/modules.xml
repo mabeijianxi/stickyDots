@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/simple/simple.iml" filepath="$PROJECT_DIR$/simple/simple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/samples.iml" filepath="$PROJECT_DIR$/samples/samples.iml" />
       <module fileurl="file://$PROJECT_DIR$/stickyDots.iml" filepath="$PROJECT_DIR$/stickyDots.iml" />
       <module fileurl="file://$PROJECT_DIR$/stickyDotsLib/stickyDotsLib.iml" filepath="$PROJECT_DIR$/stickyDotsLib/stickyDotsLib.iml" />
     </modules>
